@@ -205,7 +205,6 @@ resource "null_resource" "ansible_provisioner" {
       "sleep 300",
       "chmod 600 /home/centos/terraform_key.pem",
       "mv /home/centos/terraform_key.pem /tmp/ansible/terraform_key.pem",
-      "ansible --version",
       "echo '[haproxy_servers]' > /tmp/ansible/hosts",
       "echo '192.168.0.104' >> /tmp/ansible/hosts",
       "echo '[apache_servers]' >> /tmp/ansible/hosts",
